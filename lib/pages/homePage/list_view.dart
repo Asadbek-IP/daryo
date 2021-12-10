@@ -10,7 +10,7 @@ Widget NewsWidget(BuildContext context,News news) {
           Expanded(
             flex: 2,
             child: Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.only(left: 8,right: 8,bottom: 5),
               child: Text(news.type,style: TextStyle(color: Colors.blue,fontWeight: FontWeight.w700,fontSize: 13),),
             ),
           ),
@@ -20,15 +20,15 @@ Widget NewsWidget(BuildContext context,News news) {
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(top: 8,bottom: 8),
+                  padding: const EdgeInsets.only(right: 8,bottom: 5),
                   child: Text('${news.time} | ${news.data} | ',style: TextStyle(color: Colors.grey[600],fontSize: 12,fontWeight: FontWeight.w400),),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(top: 8,bottom: 8),
+                  padding: const EdgeInsets.only(bottom: 5,right: 2),
                   child: Icon(Icons.visibility_outlined,color: Colors.blue,size: 23,),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(top: 8,bottom: 8,right: 5),
+                  padding: const EdgeInsets.only(bottom: 5,right: 10),
                   child: Text(news.vis,style: TextStyle(color: Colors.blue),),
                 ),
               ],
@@ -63,7 +63,6 @@ Widget NewsWidget(BuildContext context,News news) {
             ),
           ),
         ),
-
         ],
       ),
       Container(
